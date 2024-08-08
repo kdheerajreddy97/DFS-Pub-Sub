@@ -1,0 +1,10 @@
+version: "3"
+services:
+  pubsub:
+    container_name: pubsubEmulator
+    image: messagebird/gcloud-pubsub-emulator
+    ports:
+    - 18681:8681
+    environment:
+      PUBSUB_PROJECT: "PubSub, email:emailsubscription"
+      PUBSUB_EMULATOR_HOST: "localhost:8681"
